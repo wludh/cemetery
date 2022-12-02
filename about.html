@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Oak Grove Cemetery Data</title>
-    <meta name="author" content="Thomas Kastner, Washington and Lee University">
+    <title>Oak Grove Cemetery Data - About</title>
+    <meta name="author" content="Thomas Kastner, Mackenzie Brooks, Washington and Lee University">
     <meta content="A census of Oak Grove Cemetery in Lexington, Virginia" />
 
     <!-- Bootstrap core CSS -->
@@ -23,7 +23,6 @@
 
   <body>
 <img class="img-fluid" width="100%" src="/images/map-banner.jpg">
-
     <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +39,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">About <span class="sr-only">(current)</span></a></li>
             <li><a href="index.html">Data</a></li>
             <li><a href="research.html">Research</a></li>
           </ul>
@@ -51,17 +50,36 @@
 </nav>
     <div class="container">
 
-<blockquote>This census of the graves in Oak Grove Cemetery is in itself a memorial to all those interred therein who deserve to be remembered not so much by their monuments as by their role and contributions however large or small to our present society. - Thomas Kastner</blockquote>
-      
-<p>The records of 6400+ graves can be searched, sorted, and browsed below. The data can be downloaded as a comma-separated value file. A <a href="images/Map_SJMC.jpg">partial map</a> of the cemetery with sections and lots identified is available, courtesy of <a href="http://library.wlu.edu/specialcollections">W&L Special Collections and Archives</a>.</p>
+<h1>About</h1>
+<br />
+<p>This website contains biographical data for individuals interred in Oak Grove Cemetery (formerly Stonewall Jackson Memorial Cemetery) in Lexington, Virginia. The data was gathered by Thomas Kastner and the original project website was published by Carol Karsch (former Library Data and Statistical Support Specialist) with help from Emily Crawford '15 through Leyburn Library at Washington and Lee University. In 2022, the data was cleaned and republished on the current website by Mackenzie Brooks, Associate Professor & Digital Humanities Librarian, who regularly uses the data in her teaching.</p>
 
+<p>A <a href="http://web.archive.org/web/20160812024205/http://news.blogs.wlu.edu/2013/02/11/wl-creates-website-for-stonewall-jackson-cemetery-census/">press release</a> about project from 2013 is available.</p>
+
+<p>Support for the original project was provided by:
+<ul>
+      <li><a href="https://library.wlu.edu/">Washington &amp; Lee University Library</a></li>
+        <li><a href="https://rockbridgehistory.org/">Rockbridge Historical Society</a></li>
+        <li><a href="http://preservationvirginia.org/">APVA/Preservation Virginia</a></li>
+        <li><a href="https://www.lexingtonva.gov/">City of Lexington</a></li>
+</ul>
+</p>
+
+<h2>Data Documentation</h2>
+
+The following modifications were made to the data set in 2022:
+
+<ul>
+  <li>Birth and death dates were standardized in ISO I601 format, expressed as YYYY-MM-DD. </li>
+  <li>The fields Monument Type, Condition, and Veteran were standardized.</li>
+</ul>
+      
     </div>
     <hr />
     <div class="container-fluid">  
       <div id='table-container'></div>
 
     </div><!-- /.container -->
-
     <footer class="footer">
       <div class="container-fluid">
         <div class="row">
@@ -82,35 +100,6 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.csv.min.js"></script>
-    <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="js/dataTables.bootstrap.js"></script>
-    <script type="text/javascript" src="js/csv_to_html_table.js"></script>
 
-
-    <script type="text/javascript">
-      function format_link(link){
-        if (link)
-          return "<a href='" + link + "' target='_blank'>" + link + "</a>";
-        else
-          return "";
-      }
-
-      CsvToHtmlTable.init({
-        csv_path: 'data/oak-grove-clean.csv',
-        element: 'table-container', 
-        allow_download: true,
-        csv_options: {separator: ',', delimiter: '"'},
-        datatables_options: {"paging": true,
-                            "autoWidth":false,
-                              },
-        custom_formatting: [[16, format_link]]
-      });
-    </script>
   </body>
 </html>
