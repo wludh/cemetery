@@ -53,8 +53,14 @@
 
 <blockquote>This census of the graves in Oak Grove Cemetery is in itself a memorial to all those interred therein who deserve to be remembered not so much by their monuments as by their role and contributions however large or small to our present society. - Thomas Kastner</blockquote>
       
-<p>The records of 6400+ graves can be searched, sorted, and browsed below. The data can be downloaded as a comma-separated value file. A <a href="images/Map_SJMC.jpg">partial map</a> of the cemetery with sections and lots identified is available, courtesy of <a href="http://library.wlu.edu/specialcollections">W&L Special Collections and Archives</a>.</p>
+<p>The records of 6400+ graves can be searched, sorted, browsed, and downloaded (as a comma-separated value file) below. </p>
 
+<p>A <a href="images/Map_SJMC.jpg">partial map</a> of the cemetery from 1982 is available, courtesy of <a href="http://library.wlu.edu/specialcollections">W&L Special Collections and Archives</a>. </p>
+
+<p><strong>Disclaimer:</strong> The data here is incomplete and has not been kept up date with new internments or gravestone cleaning projects. It is recommended that you verify information in <a href="https://www.findagrave.com/cemetery/2158181/oak-grove-cemetery">Find a Grave</a> or through other <a href="research.html">sources</a>.</p>
+<div class="text-center brick">
+<img src="/images/smallbrick.png" class="img-fluid ">
+</div>
     </div>
     <hr />
     <div class="container-fluid">  
@@ -107,7 +113,7 @@
         allow_download: true,
         csv_options: {separator: ',', delimiter: '"'},
         datatables_options: {"paging": true,
-                            "autoWidth":false,
+                            "autoWidth":true,
                               },
         custom_formatting: [[16, format_link]]
       });

@@ -9,12 +9,15 @@ body {
 footer {
     background-color: #091226;
     padding: 30px;
+    margin-top: 5em;
 }
 
 footer a {
     color: #fff;
 }
-
+.container {
+  margin-top: 3em;
+}
 h1 {
   font: 32px/1em 'Helvetica', sans-serif;
 
@@ -67,4 +70,16 @@ h2 {
 
 .navbar-default .navbar-nav>li>a {
     color: black;
+}
+
+.navbar-brand {
+  font-size: 130%;
+}
+blockquote {
+  font-style: italic;
+}
+
+.brick {
+  margin-top:2em;
+  margin-bottom:2em;
 }
